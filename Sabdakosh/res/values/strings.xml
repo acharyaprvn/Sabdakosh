@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Name of the Application -->
+    <string name="app_name">Sabdakosh</string>
+
+    <!-- The word to be searched -->
+    <string name="searchword"></string>
+
+    <!-- The word to be displayed -->
+    <string name="resultword" />
+
+    <!-- The definition of the word -->
+    <string name="worddefinition"></string>
+
+    <!-- The background of the result screen -->
+    <color name="resultbckg">#ffffff</color>
+
+    <!-- Shown above search results when we receive a search request. -->
+    <plurals name="search_results">
+        <item quantity="one">%1$d result for \"%2$s\": </item>
+        <item quantity="other">%1$d results for \"%2$s\": </item>
+    </plurals>
+
+    <!-- The hint that appears in the search box -->
+    <string name="searchhint">Word Here!!!</string>
+
+    <!-- Display when no result is found for the word -->
+    <string name="no_results">No results found for \"%s\"</string>
+
+    <!-- The option in the when menu button is pressed -->
+    <string name="search">search</string>
+
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sabdakosh"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        
+        // The main activity of the app;
+        <activity
+            android:name=".SabdakoshActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            // Receives the search request.
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" >
+            </meta-data>
+        </activity>
+        
+        // Displays the result after the search 
+        <activity
+            android:name=".ResultActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        // Provides search suggestions for words
+        <provider
+            android:name=".DictionaryProvider"
+            android:authorities="com.sabdakosh.DictionaryProvider" />
+
+        // Points to searchable activity
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".SabdakoshActivity" />
+    </application>
+
+</manifest>
